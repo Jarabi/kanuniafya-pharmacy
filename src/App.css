@@ -10,12 +10,6 @@
     --violet-color: #93478F;
 }
 
-/* Utility */
-.active {
-    font-weight: 700;
-    border-bottom: 2px solid var(--dark-color);
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -28,54 +22,68 @@
     background-color: #F5F5F5;
 }
 
+/* Utility */
+.active {
+    color: var(--primary-color) !important;
+    font-weight: 500;
+    border-bottom: 2px solid var(--primary-color);
+    cursor: default;
+}
+
+/* Container */
+
 .container {
-    /* max-width: 1200px; */
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 40px;
+    /* padding: 0 40px; */
     background-color: var(--white-color);
 }
 
-/* Nav */
+/* Header */
 
-nav {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 0;
+    padding: 40px;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    /* left: 0; */
+    width: 1200px;
     /* border: 1px solid rebeccapurple; */
 }
 
-nav header a {
+header a {
     display: flex;
     align-items: center;
     gap: 20px;
     text-decoration: none;
 }
 
-nav header img {
+header a img {
     width: 50px;
 }
 
-nav header h1 {
-    font-size: 1.5rem;
+header a h1 {
+    font-size: 2rem;
     color: var(--primary-color);
 }
 
-nav .nav-links {
+header .nav-links {
     display: flex;
     gap: 50px;
-    margin-right: 5em;
 }
 
-nav .nav-links a {
+header .nav-links a {
     text-decoration: none;
     color: var(--dark-color);
-    font-size: 1.2rem;
-    padding-bottom: 2px;
+    font-size: 1.4rem;
+    line-height: 1.5;
     transition: all 0.3s ease;
 }
 
-nav .nav-links a:hover {
+header .nav-links a:hover:not(.active) {
     color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
 }
