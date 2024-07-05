@@ -1,21 +1,65 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import logoImage from '../assets/logo.png';
 
 const Navigation = () => {
+    const location = useLocation();
+    const links = [
+        { name: 'Home', path: '/' },
+        { name: 'About', path: '/about' },
+        { name: 'Services', path: '/services' },
+        { name: 'Contact', path: '/contact' },
+    ];
+
     return (
-        <div className='nav-links'>
-            <Link className='nav-item active' to='/'>
-                Home
-            </Link>
-            <Link className='nav-item' to='/about'>
-                About
-            </Link>
-            <Link className='nav-item' to='/services'>
-                Services
-            </Link>
-            <Link className='nav-item' to='/contact'>
-                Contact
-            </Link>
-        </div>
+        <nav className='navbar navbar-expand-lg pt-4 fixed-top'>
+            <div className='container'>
+                <Link className='navbar-brand' to='/'>
+                    <img
+                        src={logoImage}
+                        alt='KanuniAfya logo image'
+                        className='logo ms-5'
+                        width={50}
+                        height={50}
+                    />
+                    <div className='header'>
+                        <h1>KanuniAfya Pharmacy</h1>
+                        <h3>Health Guaranteed</h3>
+                    </div>
+                </Link>
+                <button
+                    className='navbar-toggler'
+                    type='button'
+                    data-bs-toggle='collapse'
+                    data-bs-target='#nav-items'
+                    aria-controls='nav-items'
+                    aria-expanded='false'
+                    aria-label='Toggle navigation'
+                >
+                    <span className='navbar-toggler-icon'></span>
+                </button>
+                <div className='collapse navbar-collapse' id='nav-items'>
+                    <ul className='navbar-nav me-5 mb-2 mb-lg-0'>
+                        {links.map((link) => (
+                            <li className='nav-item' key={link.path}>
+                                <Link
+                                    className={`nav-link ${
+                                        location.pathname === link.path
+                                            ? 'active'
+                                            : ''
+                                    }`}
+                                    {...(location.pathname === link.path && {
+                                        'aria-current': 'page',
+                                    })}
+                                    to={link.path}
+                                >
+                                    {link.name}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </nav>
     );
 };
 

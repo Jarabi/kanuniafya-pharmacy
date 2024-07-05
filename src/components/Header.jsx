@@ -5,17 +5,22 @@ import Navigation from './Navigation';
 
 const Header = () => {
     return (
-        <header>
-            <Link to='/'>
-                <img
-                    src={logoImage}
-                    alt='KanuniAfya logo image'
-                    className='logo'
-                />
-                <h1>KanuniAfya Pharmacy</h1>
-            </Link>
-            <Navigation />
-        </header>
+        <div className='container'>
+            <header>
+                <Link to='/'>
+                    <img
+                        src={logoImage}
+                        alt='KanuniAfya logo image'
+                        className='logo'
+                    />
+                    <div className='header-text'>
+                        <h1>KanuniAfya Pharmacy</h1>
+                        <h3>Health Guaranteed</h3>
+                    </div>
+                </Link>
+                <Navigation />
+            </header>
+        </div>
     );
 };
 
