@@ -81,14 +81,13 @@
     text-shadow: 0 0 5cqmin rgba(20, 109, 22, 0.2);
 }
 
-/* Hero */
+/* Hero section */
 
 .hero {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    gap: 20px;
     width: 100%;
     height: 500px;
     padding: 150px 40px 0;
@@ -112,7 +111,7 @@
 }
 
 .hero a {
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     color: var(--light-color);
     padding: 15px 25px;
     background-color: var(--primary-color);
@@ -122,8 +121,61 @@
 }
 
 .hero a:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* About section */
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background-color: var(--light-blue-color);
+}
+
+.about .section-img img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.about .section-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-right: 40px;
+}
+
+.about .section-details h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--dark-color);
+}
+
+.about .section-details p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--dark-color);
+}
+
+.about .section-details p.subheading {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--dark-color);
+}
+
+.about .section-details a {
+    font-size: 1.2rem;
     color: var(--light-color);
+    padding: 15px 25px;
     background-color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.25s ease-in-out;
+}
+
+.about .section-details a:hover {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
