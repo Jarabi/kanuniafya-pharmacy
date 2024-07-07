@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Button from './Button';
 import aboutImg from '../assets/about.jpg';
 
 const About = () => {
@@ -20,7 +20,8 @@ const About = () => {
                     friendly team is here to ensure you have everything you need
                     to manage your health effectively and conveniently.
                 </p>
-                <Link to='/about'>Read More</Link>
+                {/* <Link to='/about'>Read More</Link> */}
+                <Button path='/about'>Read More</Button>
             </div>
         </section>
     );

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Button from './Button';
 
 const Hero = () => {
     return (
@@ -11,7 +11,8 @@ const Hero = () => {
                 you with the highest quality care and a wide range of health and
                 wellness products.
             </p>
-            <Link to='/services'>View Our Services</Link>
+            {/* <Link to='/services'>View Our Services</Link> */}
+            <Button path='/'>View Our Services</Button>
         </section>
     );
 };
