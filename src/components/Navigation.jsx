@@ -11,13 +11,13 @@ const Navigation = () => {
     ];
 
     return (
-        <nav className='navbar navbar-expand-lg pt-4 fixed-top'>
+        <nav className='navbar navbar-expand-lg fixed-top'>
             <div className='container'>
                 <Link className='navbar-brand' to='/'>
                     <img
                         src={logoImage}
                         alt='KanuniAfya logo image'
-                        className='logo ms-5'
+                        className='logo'
                         width={50}
                         height={50}
                     />
@@ -38,7 +38,7 @@ const Navigation = () => {
                     <span className='navbar-toggler-icon'></span>
                 </button>
                 <div className='collapse navbar-collapse' id='nav-items'>
-                    <ul className='navbar-nav me-5 mb-2 mb-lg-0'>
+                    <ul className='navbar-nav mb-2 mb-lg-0'>
                         {links.map((link) => (
                             <li className='nav-item' key={link.path}>
                                 <Link
