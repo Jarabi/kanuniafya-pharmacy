@@ -20,7 +20,6 @@ const About = () => {
                     friendly team is here to ensure you have everything you need
                     to manage your health effectively and conveniently.
                 </p>
-                {/* <Link to='/about'>Read More</Link> */}
                 <Button path='/about'>Read More</Button>
             </div>
         </section>

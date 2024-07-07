@@ -11,7 +11,6 @@ const Hero = () => {
                 you with the highest quality care and a wide range of health and
                 wellness products.
             </p>
-            {/* <Link to='/services'>View Our Services</Link> */}
             <Button path='/'>View Our Services</Button>
         </section>
     );
