@@ -1,9 +1,9 @@
 import Button from './Button';
-import aboutImg from '../assets/about.jpg';
+import aboutImg from '../assets/about-section.jpg';
 
 const About = () => {
     return (
-        <section className='about'>
+        <section className='about-section'>
             <div className='section-img'>
                 <img src={aboutImg} alt='shopping bag with some drugs' />
             </div>

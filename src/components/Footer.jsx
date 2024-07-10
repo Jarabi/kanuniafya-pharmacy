@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -33,56 +32,31 @@ const Footer = () => {
                         </p>
                         <div className='site-links'>
                             {siteLinks.map((link, index) => (
-                                <React.Fragment key={link.index}>
-                                    <Link to={link.path}>{link.name}</Link>
+                                <>
+                                    <Link to={link.path} key={link.index}>
+                                        {link.name}
+                                    </Link>
                                     {index < siteLinks.length - 1 && (
                                         <span>&middot;</span>
                                     )}
-                                </React.Fragment>
+                                </>
                             ))}
                         </div>
                         <div className='social-links'>
                             {socialLinks.map((link, index) => (
-                                <React.Fragment key={index}>
+                                <>
                                     <Link
                                         target={'_blank'}
                                         to={link.path}
                                         className={`social-icon ${link.name}`}
+                                        key={index}
                                     >
                                         <i
                                             className={`bx bxl-${link.name}`}
                                         ></i>
                                     </Link>
-                                </React.Fragment>
+                                </>
                             ))}
-                            {/* <Link
-                                target={'_blank'}
-                                to='https://www.facebook.com'
-                                className='facebook'
-                            >
-                                <i className='bx bxl-facebook'></i>
-                            </Link>
-                            <Link
-                                target={'_blank'}
-                                to='https://www.twitter.com'
-                                className='twitter'
-                            >
-                                <i className='bx bxl-twitter'></i>
-                            </Link>
-                            <Link
-                                target={'_blank'}
-                                to='https://www.instagram.com'
-                                className='instagram'
-                            >
-                                <i className='bx bxl-instagram'></i>
-                            </Link>
-                            <Link
-                                target={'_blank'}
-                                to='https://www.linkedin.com'
-                                className='linkedin'
-                            >
-                                <i className='bx bxl-linkedin'></i>
-                            </Link> */}
                         </div>
                     </div>
                 </div>

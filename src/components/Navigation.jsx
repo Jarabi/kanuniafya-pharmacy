@@ -11,15 +11,15 @@ const Navigation = () => {
     ];
 
     return (
-        <nav className='navbar navbar-expand-lg fixed-top'>
+        <nav className='navbar navbar-expand-lg fixed-top p-3'>
             <div className='container'>
                 <Link className='navbar-brand' to='/'>
                     <img
                         src={logoImage}
                         alt='KanuniAfya logo image'
                         className='logo'
-                        width={50}
-                        height={50}
+                        width={40}
+                        height={40}
                     />
                     <div className='header'>
                         <h1>KanuniAfya Pharmacy</h1>

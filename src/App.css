@@ -55,10 +55,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
     background-color: var(--light-color);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-
 }
 
 .navbar-brand {
@@ -79,12 +77,12 @@ nav {
 }
 
 .navbar-brand .header h1 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
 .navbar-brand .header h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: normal;
 }
 
@@ -96,7 +94,7 @@ nav {
 }
 
 .navbar-nav .nav-item {
-    font-size: 1.2rem;
+    font-size: 1rem;
     transition: all 0.3s ease;
 }
 
@@ -137,18 +135,18 @@ nav {
 
 /* About section */
 
-.about {
+.about-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     background-color: var(--light-blue-color);
 }
 
-.about .section-img img {
+.about-section .section-img img {
     width: 80%;
 }
 
-.about .section-details {
+.about-section .section-details {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -157,22 +155,61 @@ nav {
     text-align: justify;
 }
 
-.about .section-details h2 {
+.about-section .section-details h2 {
     font-size: 2rem;
     font-weight: 400;
     color: var(--dark-color);
 }
 
-.about .section-details p {
+.about-section .section-details p {
     font-size: 1.2rem;
     font-weight: 400;
     color: var(--dark-color);
 }
 
-.about .section-details p.subheading {
+.about-section .section-details p.subheading {
     font-size: 1.1rem;
     font-weight: 400;
     color: var(--dark-color);
+}
+
+/* About page */
+
+.about-page {
+    margin-top: 40px;
+}
+
+.about-page .section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 0 60px;
+}
+
+.about-page .about,
+.about-page .our-mission {
+    background-color: var(--white-color);
+}
+
+.about-page .choose-us {
+    padding: 40px 60px;
+}
+
+.about-page .section-details .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.about-page .section-details .section-description {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.about-page .section-details .section-description span {
+    font-weight: 700;
+
 }
 
 /* Footer */
