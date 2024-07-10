@@ -4,8 +4,10 @@ import About from '../components/AboutSection';
 const Home = () => {
     return (
         <div className='container'>
-            <Hero />
-            <About />
+            <div className='home'>
+                <Hero />
+                <About />
+            </div>
         </div>
     );
 };

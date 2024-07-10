@@ -35,13 +35,36 @@
     color: var(--primary-color);
 }
 
+.section-details .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.section-details .section-subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.section-details .section-description {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.section-details .section-description span {
+    font-weight: 700;
+}
+
+/* Button */
 .btn-primary {
-    /* font-size: 1.2rem; */
+    font-size: 1.2rem;
     color: var(--light-color);
-    padding: 10px 20px;
+    padding: 10px 25px;
     background-color: var(--primary-color);
     text-decoration: none;
     border-radius: 50px;
+    margin-top: 10px;
     transition: all 0.25s ease-in-out;
 }
 
@@ -94,14 +117,15 @@ nav {
 }
 
 .navbar-nav .nav-item {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.2;
     transition: all 0.3s ease;
 }
 
 .navbar-nav .nav-item a:hover:not(.active) {
     color: var(--primary-color);
     border-bottom: 1px solid var(--primary-color);
-    text-shadow: 0 0 5cqmin rgba(20, 109, 22, 0.2);
+    text-shadow: 0 0 2px rgba(20, 109, 22, 0.2);
 }
 
 /* Hero section */
@@ -126,8 +150,8 @@ nav {
 }
 
 .hero p {
-    font-size: 1.3rem;
-    font-weight: 400;
+    font-size: 1.4rem;
+    font-weight: 500;
     width: 650px;
     color: var(--dark-color);
     background-color: var(--yellow-background);
@@ -135,42 +159,11 @@ nav {
 
 /* About section */
 
-.about-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    background-color: var(--light-blue-color);
-}
-
-.about-section .section-img img {
-    width: 80%;
-}
-
-.about-section .section-details {
+.home .section {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    padding-right: 40px;
-    text-align: justify;
-}
-
-.about-section .section-details h2 {
-    font-size: 2rem;
-    font-weight: 400;
-    color: var(--dark-color);
-}
-
-.about-section .section-details p {
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: var(--dark-color);
-}
-
-.about-section .section-details p.subheading {
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: var(--dark-color);
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
 }
 
 /* About page */
@@ -194,22 +187,6 @@ nav {
 
 .about-page .choose-us {
     padding: 40px 60px;
-}
-
-.about-page .section-details .section-title {
-    font-size: 2rem;
-    font-weight: 700;
-}
-
-.about-page .section-details .section-description {
-    font-size: 1.4rem;
-    font-weight: 400;
-    margin-top: 20px;
-}
-
-.about-page .section-details .section-description span {
-    font-weight: 700;
-
 }
 
 /* Footer */

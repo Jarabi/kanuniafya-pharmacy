@@ -1,10 +1,14 @@
+import LazyLoadImage from './LazyLoadImage';
 import teamImg from '../assets/our-team.jpg';
 
 export default function OurTeam() {
     return (
         <section className='team section'>
             <div className='section-illustation'>
-                <img src={teamImg} alt='' className='section-img' width={500} />
+                <LazyLoadImage
+                    src={teamImg}
+                    alt='Image of four people in a lightbulb'
+                />
             </div>
             <div className='section-details'>
                 <h2 className='section-title'>
