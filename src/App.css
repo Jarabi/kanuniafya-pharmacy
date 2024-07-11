@@ -6,6 +6,7 @@
     --black-color: #000;
     --white-color: #fff;
     --light-blue-color: #E0EFF6;
+    --lighter-blue-color: #D0E7F5;
     --lavender-color: #3B4896;
     --violet-color: #93478F;
     --yellow-background: rgba(254, 198, 0, .5)
@@ -33,6 +34,13 @@
 
 .accent {
     color: var(--primary-color);
+}
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
 }
 
 .section-details .section-title {
@@ -64,7 +72,7 @@
     background-color: var(--primary-color);
     text-decoration: none;
     border-radius: 50px;
-    margin-top: 10px;
+    margin-top: 15px;
     transition: all 0.25s ease-in-out;
 }
 
@@ -159,24 +167,17 @@ nav {
 
 /* About section */
 
-.home .section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
+.home .about {
+    background-color: var(--light-blue-color);
 }
 
 /* About page */
 
-.about-page {
+.about-page{
     margin-top: 40px;
 }
 
 .about-page .section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
     padding: 0 60px;
 }
 
@@ -187,6 +188,70 @@ nav {
 
 .about-page .choose-us {
     padding: 40px 60px;
+}
+
+/* Services page */
+
+.services-page {
+    margin-top: 80px;
+    padding-top: 40px;
+}
+
+.services-page h2 {
+    font-size: 2rem;
+}
+
+.services-page p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.services-page .cards .section {
+    margin: 20px 0;
+    padding: 0 80px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.services-page .section-details .section-title {
+    font-size: 6rem;
+}
+
+.services-page .section-details .section-subtitle {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.services-page .section-details .section-description {
+    font-size: 2rem;
+}
+
+.services-page .otc {
+    background-color: var(--lavender-color);
+}
+
+.services-page .online-ordering {
+    background-color: var(--lighter-blue-color);
+}
+
+.services-page .prescription-services {
+    background-color: var(--violet-color);
+}
+
+.services-page .otc .section-title,
+.services-page .otc .section-description,
+.services-page .prescription-services .section-title,
+.services-page .prescription-services .section-description {
+    color: var(--white-color);
+}
+
+.services-page .otc .section-subtitle,
+.services-page .prescription-services .section-subtitle {
+    color: var(--secondary-color);
+}
+
+.services-page .online-ordering .section-subtitle {
+    color: var(--primary-color);
 }
 
 /* Footer */

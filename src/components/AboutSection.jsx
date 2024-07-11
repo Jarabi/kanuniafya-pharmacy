@@ -18,7 +18,7 @@ const About = () => {
                 <h3 className='section-subtitle'>
                     Investing in your health and wellbeing
                 </h3>
-                <p className='section-description mb-4'>
+                <p className='section-description mb-5'>
                     KanuniAfya is a trusted pharmacy, devoted to safe medicine
                     and overall well-being of its clients. Our experienced and
                     friendly team is here to ensure you have everything you need
