@@ -110,6 +110,7 @@ nav {
     align-items: center;
     background-color: var(--light-color);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    /* backdrop-filter: blur(10px); */
 }
 
 .navbar-brand {
@@ -182,7 +183,7 @@ nav {
 .hero p {
     font-size: 1.4rem;
     font-weight: 500;
-    width: 650px;
+    width: 700px;
     color: var(--dark-color);
     background-color: var(--yellow-background);
 }

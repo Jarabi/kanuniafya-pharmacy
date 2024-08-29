@@ -10,10 +10,10 @@ export default function AboutKanuniafya() {
                 </h2>
                 <p className='section-description'>
                     Welcome to KanuniAfya Pharmacy, your trusted partner in
-                    health and wellness. Since our establishment, we have been
-                    committed to providing exceptional pharmaceutical care to
-                    our community. Our name, KanuniAfya, reflects our core
-                    mission: &quot;Health Guaranteed.&quot; We believe that
+                    healthcare and wellness. Since our establishment, we have
+                    been committed to providing exceptional pharmaceutical care
+                    to our clients. Our name, KanuniAfya, reflects our core
+                    mission: &quot;Health Guaranteed&quot;. We believe that
                     everyone deserves access to high-quality healthcare services
                     and products.
                 </p>

@@ -16,11 +16,11 @@ export default function OurTeam() {
                 </h2>
                 <p className='section-description'>
                     Our team is dedicated to providing compassionate care and
-                    expert advice. We take the time to listen to your needs and
-                    offer tailored solutions to help you achieve optimal health.
-                    Our commitment to ongoing education ensures we stay
-                    up-to-date with the latest advancements in pharmacy
-                    practice.
+                    expert advice. The team takes time to listen to
+                    clients&apos; needs and offer tailored solutions to help
+                    them achieve optimal health. Our commitment to continuous
+                    education ensures the team stays abreast with the latest
+                    advancements in pharmacy practice.
                 </p>
             </div>
         </section>

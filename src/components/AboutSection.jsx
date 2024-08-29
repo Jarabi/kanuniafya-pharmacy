@@ -16,13 +16,13 @@ const About = () => {
                     About <span className='accent'>KanuniAfya</span>
                 </h2>
                 <h3 className='section-subtitle'>
-                    Investing in your health and wellbeing
+                    Enhancing your health and wellbeing
                 </h3>
                 <p className='section-description mb-5'>
                     KanuniAfya is a trusted pharmacy, devoted to safe medicine
-                    and overall well-being of its clients. Our experienced and
-                    friendly team is here to ensure you have everything you need
-                    to manage your health effectively and conveniently.
+                    for, and overall well-being of its clients. Our experienced
+                    and friendly team will always be readily available to ensure
+                    you access requisite healthcare promptly and effectively.
                 </p>
                 <Button path='/about'>Read More</Button>
             </div>

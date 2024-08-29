@@ -15,17 +15,18 @@ export default function ChooseUs() {
                             <span className='accent'>
                                 Exceptional Customer Service
                             </span>
-                            : Friendly and knowledgeable staff ready to assist
+                            : Friendly and experienced staff ready to assist
                             you.
                         </li>
                         <li>
                             <span className='accent'>Quality Products</span>:
-                            Trusted brands and high-quality medications.
+                            Trusted brands and high-quality medications at
+                            reasonable cost.
                         </li>
                         <li>
-                            <span className='accent'>Community Focus</span>:
-                            Active participation in community health initiatives
-                            and events.
+                            <span className='accent'>Community Support</span>:
+                            Active participation in community health related
+                            initiatives and events.
                         </li>
                     </ul>
                     <p>

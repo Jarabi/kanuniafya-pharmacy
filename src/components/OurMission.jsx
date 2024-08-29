@@ -11,7 +11,7 @@ export default function OurMission() {
                 <p className='section-description'>
                     At KanuniAfya Pharmacy, our mission is to enhance the health
                     and well-being of our customers through personalized care
-                    and innovative solutions. We strive to create a welcoming
+                    and innovative solutions. We strive to create an enabling
                     environment where everyone feels valued and supported in
                     their health journey.
                 </p>
