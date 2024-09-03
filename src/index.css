@@ -1,68 +1,405 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --primary-color: rgba(20, 109, 22, 1);
+  --secondary-color: #DBC078;
+  --light-color: #f5f5f5;
+  --dark-color: #252525;
+  --black-color: #000;
+  --white-color: #fff;
+  --light-blue-color: #E0EFF6;
+  --lighter-blue-color: #D0E7F5;
+  --lavender-color: #3B4896;
+  --violet-color: #93478F;
+  --yellow-background: rgba(254, 198, 0, .5)
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+* {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+#root {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  background-color: #F5F5F5;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+/* Utility */
+.active {
+  color: var(--primary-color) !important;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  border-bottom: 2px solid var(--primary-color);
+  cursor: default;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.accent {
+  color: var(--primary-color);
+}
+
+/* section */
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.section-details .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.section-details .section-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.section-details .section-description {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.section-details .section-description span {
+  font-weight: 700;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-color);
+  background-color: var(--dark-color);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-links a:hover {
+  color: var(--light-color);
+  background-color: var(--primary-color);
+}
+
+/* Button */
+.btn-primary {
+  font-size: 1.2rem;
+  color: var(--light-color);
+  padding: 10px 25px;
+  background-color: var(--primary-color);
+  text-decoration: none;
+  border-radius: 50px;
+  margin-top: 15px;
+  transition: all 0.25s ease-in-out;
+}
+
+.btn-primary:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Nav */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--light-color);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  /* backdrop-filter: blur(10px); */
+}
+
+.navbar-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.navbar-brand .header {
+  color: var(--primary-color);
+}
+
+.navbar-brand .header h1,
+.navbar-brand .header h3 {
+  margin: 0;
+}
+
+.navbar-brand .header h1 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.navbar-brand .header h3 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 40px;
+}
+
+.navbar-nav .nav-item {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-item a:hover:not(.active) {
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+  text-shadow: 0 0 2px rgba(20, 109, 22, 0.2);
+}
+
+/* Hero section */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+  height: 500px;
+  padding: 150px 40px 0;
+  background-image: url('./assets/hero.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--dark-color);
+}
+
+.hero p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  width: 700px;
+  color: var(--dark-color);
+  background-color: var(--yellow-background);
+}
+
+/* About section */
+
+.home .about {
+  background-color: var(--light-blue-color);
+}
+
+/* About page */
+
+.about-page{
+  margin-top: 40px;
+}
+
+.about-page .section {
+  padding: 0 60px;
+}
+
+.about-page .about,
+.about-page .our-mission {
+  background-color: var(--white-color);
+}
+
+.about-page .choose-us {
+  padding: 40px 60px;
+}
+
+/* Services page */
+
+.services-page h2 {
+  font-size: 2rem;
+}
+
+.services-page p {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.services-page .cards .section {
+  margin: 20px 0;
+  padding: 0 80px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.services-page .section-details .section-title {
+  font-size: 4rem;
+}
+
+.services-page .section-details .section-subtitle {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.services-page .section-details .section-description {
+  font-size: 1.5rem;
+}
+
+.services-page .otc {
+  background-color: var(--lavender-color);
+}
+
+.services-page .online-ordering {
+  background-color: var(--lighter-blue-color);
+}
+
+.services-page .prescription-services {
+  background-color: var(--violet-color);
+}
+
+.services-page .otc .section-title,
+.services-page .otc .section-description,
+.services-page .prescription-services .section-title,
+.services-page .prescription-services .section-description {
+  color: var(--white-color);
+}
+
+.services-page .otc .section-subtitle,
+.services-page .prescription-services .section-subtitle {
+  color: var(--secondary-color);
+}
+
+.services-page .online-ordering .section-subtitle {
+  color: var(--primary-color);
+}
+
+.services-page,
+.contact-page {
+  margin-top: 80px;
+  padding-top: 40px;
+}
+
+/* Contact page */
+.contact-page {
+  padding: 40px;
+  background-color: var(--white-color);
+}
+
+.contact-page h2 {
+  font-size: 2rem;
+}
+
+.contact-page .welcome-text {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.contact-section {
+  margin-bottom: 40px;
+  padding: 20px 40px;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+}
+
+.contact-section .map {
+  padding: 0;
+}
+
+.contact-section .map img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.contact-section .contact-form {
+  padding: 40px;
+}
+
+.contact-section .contact-form h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+.contact-section .contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.contact-section .contact-form form input,
+.contact-section .contact-form form textarea {
+  font-size: 0.9rem;
+  padding: 8px;
+  text-transform: uppercase;
+  border: none;
+}
+
+.contact-section .contact-form form input:focus,
+.contact-section .contact-form form textarea:focus {
+  outline: none;
+}
+
+.contact-section .contact-form form input {
+  width: 300px;
+}
+
+.contact-section .contact-form form button {
+  align-self: flex-start;
+  padding: 10px 40px;
+  background-color: var(--black-color);
+  color: var(--light-color);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.contact-section .contact-form form button:hover {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+}
+
+.contact-section .contact-info {
+  margin-top: 40px;
+}
+
+.contact-section .contact-info h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+/* Footer */
+
+.footer {
+  padding: 40px 0;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  font-size: .9rem;
+}
+
+.footer .content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer .content .copyright {
+  font-size: inherit;
+  margin: 0;
+}
+
+.footer .content .site-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer .content .site-links a {
+  color: var(--light-color);
+  text-decoration: none;
 }
