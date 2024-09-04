@@ -1,14 +1,17 @@
 import Button from './Button';
-import LazyLoadImage from './LazyLoadImage';
+import Image from './LazyLoadImage';
 import aboutImg from '../assets/about-section.jpg';
 
 const About = () => {
     return (
         <section className='about section'>
             <div className='section-illustation'>
-                <LazyLoadImage
-                    src={aboutImg}
-                    alt='shopping bag with some drugs'
+                <Image
+                    image={{
+                        src: aboutImg,
+                        alt: 'shopping bag with some drugs',
+                        width: 500,
+                    }}
                 />
             </div>
             <div className='section-details'>

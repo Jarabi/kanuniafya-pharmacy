@@ -1,25 +1,22 @@
-import LazyLoad from 'react-lazy-load';
 import PropTypes from 'prop-types';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
-export default function LazyLoadImage({ src, alt, width = 500, height = 500 }) {
-    return (
-        <div>
-            <LazyLoad width={width}>
-                <img
-                    src={src}
-                    alt={alt}
-                    className='section-img'
-                    width={width}
-                    height={height}
-                />
-            </LazyLoad>
-        </div>
-    );
-}
+const Image = ({ image }) => (
+    <LazyLoadImage
+        alt={image.alt}
+        width={image.width}
+        src={image.src}
+        effect='blur'
+    />
+);
 
-LazyLoadImage.propTypes = {
-    src: PropTypes.string.isRequired,
-    alt: PropTypes.string.isRequired,
-    width: PropTypes.number,
-    height: PropTypes.number,
+export default Image;
+
+Image.propTypes = {
+    image: PropTypes.shape({
+        src: PropTypes.string.isRequired,
+        alt: PropTypes.string.isRequired,
+        width: PropTypes.number,
+    }).isRequired,
 };

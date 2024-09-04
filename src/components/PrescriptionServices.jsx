@@ -1,4 +1,4 @@
-import LazyLoadImage from './LazyLoadImage';
+import Image from './LazyLoadImage';
 import prescriptionServicesImg from '../assets/prescription-services.jpg';
 
 export default function PrescriptionServices() {
@@ -12,9 +12,12 @@ export default function PrescriptionServices() {
                 </p>
             </div>
             <div className='section-illustration'>
-                <LazyLoadImage
-                    src={prescriptionServicesImg}
-                    alt='Pharmacist filling up prescription form'
+                <Image
+                    image={{
+                        src: prescriptionServicesImg,
+                        alt: 'Pharmacist filling up prescription form',
+                        width: 600,
+                    }}
                 />
             </div>
         </section>

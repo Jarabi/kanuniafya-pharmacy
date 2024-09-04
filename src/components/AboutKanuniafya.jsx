@@ -1,4 +1,4 @@
-import LazyLoadImage from './LazyLoadImage';
+import Image from './LazyLoadImage';
 import aboutImg from '../assets/about-kanuniafya.jpg';
 
 export default function AboutKanuniafya() {
@@ -19,9 +19,12 @@ export default function AboutKanuniafya() {
                 </p>
             </div>
             <div className='section-illustation'>
-                <LazyLoadImage
-                    src={aboutImg}
-                    alt='three people in a pharmacy setting'
+                <Image
+                    image={{
+                        src: aboutImg,
+                        alt: 'three people in a pharmacy setting',
+                        width: 600,
+                    }}
                 />
             </div>
         </section>

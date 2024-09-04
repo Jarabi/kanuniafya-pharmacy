@@ -1,4 +1,4 @@
-import LazyLoadImage from './LazyLoadImage';
+import Image from './LazyLoadImage';
 import otcImg from '../assets/otc-products.jpg';
 
 export default function OTCProducts() {
@@ -13,9 +13,12 @@ export default function OTCProducts() {
                 </p>
             </div>
             <div className='section-illustration'>
-                <LazyLoadImage
-                    src={otcImg}
-                    alt='Customer looking at OTC products in a pharmacy'
+                <Image
+                    image={{
+                        src: otcImg,
+                        alt: 'Customer looking at OTC products in a pharmacy',
+                        width: 600,
+                    }}
                 />
             </div>
         </section>

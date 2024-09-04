@@ -1,4 +1,4 @@
-import LazyLoadImage from './LazyLoadImage';
+import Image from './LazyLoadImage';
 import missionImg from '../assets/our-mission.jpg';
 
 export default function OurMission() {
@@ -17,9 +17,12 @@ export default function OurMission() {
                 </p>
             </div>
             <div className='section-illustation'>
-                <LazyLoadImage
-                    src={missionImg}
-                    alt='Three people around a bullseye target with an arrow in the center'
+                <Image
+                    image={{
+                        src: missionImg,
+                        alt: 'Three people around a bullseye target with an arrow in the center',
+                        width: 600,
+                    }}
                 />
             </div>
         </section>

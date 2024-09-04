@@ -1,13 +1,16 @@
-import LazyLoadImage from './LazyLoadImage';
+import Image from './LazyLoadImage';
 import onlineOrderingImg from '../assets/online-ordering.jpg';
 
 export default function OnlineOrdering() {
     return (
         <section className='online-ordering section'>
             <div className='section-illustration'>
-                <LazyLoadImage
-                    src={onlineOrderingImg}
-                    alt='Customer ordering drugs online through phone app'
+                <Image
+                    image={{
+                        src: onlineOrderingImg,
+                        alt: 'Customer ordering drugs online through phone app',
+                        width: 600,
+                    }}
                 />
             </div>
             <div className='section-details'>
