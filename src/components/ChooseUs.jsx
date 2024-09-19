@@ -1,8 +1,8 @@
 export default function ChooseUs() {
     return (
-        <section className='choose-us'>
+        <section className='choose-us section'>
             <div className='section-details'>
-                <h2 className='section-title text-center'>
+                <h2 className='section-title'>
                     Why <span className='accent'>Choose</span> KanuniAfya
                 </h2>
                 <div className='section-description'>

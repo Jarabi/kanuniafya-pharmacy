@@ -5,7 +5,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 const Image = ({ image }) => (
     <LazyLoadImage
         alt={image.alt}
-        width={image.width}
+        // width={image.width}
         src={image.src}
         effect='blur'
     />
@@ -17,6 +17,6 @@ Image.propTypes = {
     image: PropTypes.shape({
         src: PropTypes.string.isRequired,
         alt: PropTypes.string.isRequired,
-        width: PropTypes.number,
+        // width: PropTypes.number,
     }).isRequired,
 };

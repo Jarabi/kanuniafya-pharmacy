@@ -3,7 +3,7 @@ import aboutImg from '../assets/about-kanuniafya.jpg';
 
 export default function AboutKanuniafya() {
     return (
-        <section className='about section'>
+        <section className='about-kanuniafya section'>
             <div className='section-details'>
                 <h2 className='section-title'>
                     About <span className='accent'>Kanuniafya</span>
@@ -18,12 +18,12 @@ export default function AboutKanuniafya() {
                     and products.
                 </p>
             </div>
-            <div className='section-illustation'>
+            <div className='section-illustration'>
                 <Image
                     image={{
                         src: aboutImg,
                         alt: 'three people in a pharmacy setting',
-                        width: 600,
+                        // width: 600,
                     }}
                 />
             </div>

@@ -3,8 +3,8 @@ import teamImg from '../assets/our-team.jpg';
 
 export default function OurTeam() {
     return (
-        <section className='team section'>
-            <div className='section-illustation'>
+        <section className='section'>
+            <div className='section-illustration'>
                 <Image
                     image={{
                         src: teamImg,

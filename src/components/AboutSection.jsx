@@ -4,13 +4,12 @@ import aboutImg from '../assets/about-section.jpg';
 
 const About = () => {
     return (
-        <section className='about section'>
-            <div className='section-illustation'>
+        <section className='about-section'>
+            <div className='section-illustration'>
                 <Image
                     image={{
                         src: aboutImg,
                         alt: 'shopping bag with some drugs',
-                        width: 500,
                     }}
                 />
             </div>
@@ -21,7 +20,7 @@ const About = () => {
                 <h3 className='section-subtitle'>
                     Enhancing your health and wellbeing
                 </h3>
-                <p className='section-description mb-5'>
+                <p className='section-description'>
                     KanuniAfya is a trusted pharmacy, devoted to safe medicine
                     for, and overall well-being of its clients. Our experienced
                     and friendly team will always be readily available to ensure

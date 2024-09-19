@@ -11,28 +11,30 @@ const Footer = () => {
 
     return (
         <section className='footer'>
-            <div className='container'>
-                <div className='row'>
-                    <div className='content col-lg-12'>
-                        <p className='copyright'>
-                            <strong>KanuniAfya Pharmacy</strong> © 2024. All
-                            Rights Reserved
-                        </p>
-                        <div className='site-links'>
-                            {siteLinks.map((link, index) => (
-                                <>
-                                    <Link to={link.path} key={link.index}>
-                                        {link.name}
-                                    </Link>
-                                    {index < siteLinks.length - 1 && (
-                                        <span>&middot;</span>
-                                    )}
-                                </>
-                            ))}
-                        </div>
-                        <SocialLinks />
-                    </div>
+            <div className='footer-content'>
+                <p className='footer-heading'>
+                    <span className='footer-title'>
+                        <strong>KanuniAfya Pharmacy</strong>
+                    </span>
+                    <span className='copyright'>
+                        © 2024. All Rights Reserved
+                    </span>
+                </p>
+                <div className='site-links'>
+                    <ul>
+                        {siteLinks.map((link, index) => (
+                            <>
+                                <li key={link.index}>
+                                    <Link to={link.path}>{link.name}</Link>
+                                </li>
+                                {index < siteLinks.length - 1 && (
+                                    <span>&middot;</span>
+                                )}
+                            </>
+                        ))}
+                    </ul>
                 </div>
+                <SocialLinks />
             </div>
         </section>
     );

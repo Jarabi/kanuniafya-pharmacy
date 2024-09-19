@@ -5,13 +5,11 @@ import ChooseUs from '../components/ChooseUs';
 
 export default function About() {
     return (
-        <div className='container'>
-            <div className='about-page'>
-                <AboutKanuniafya />
-                <OurTeam />
-                <OurMission />
-                <ChooseUs />
-            </div>
+        <div className='about section-layout'>
+            <AboutKanuniafya />
+            <OurTeam />
+            <OurMission />
+            <ChooseUs />
         </div>
     );
 }
