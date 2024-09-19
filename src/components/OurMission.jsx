@@ -3,7 +3,7 @@ import missionImg from '../assets/our-mission.jpg';
 
 export default function OurMission() {
     return (
-        <section className='about section'>
+        <section className='our-mission section'>
             <div className='section-details'>
                 <h2 className='section-title'>
                     Our <span className='accent'>Mission</span>
@@ -16,7 +16,7 @@ export default function OurMission() {
                     their health journey.
                 </p>
             </div>
-            <div className='section-illustation'>
+            <div className='section-illustration'>
                 <Image
                     image={{
                         src: missionImg,

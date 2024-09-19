@@ -5,8 +5,8 @@ export default function OTCProducts() {
     return (
         <section className='otc section'>
             <div className='section-details'>
-                <h2 className='section-title'>01</h2>
-                <h3 className='section-subtitle'>Over the Counter Products</h3>
+                <h3 className='section-title'>01</h3>
+                <h4 className='section-subtitle'>Over the Counter Products</h4>
                 <p className='section-description'>
                     A wide selection of OTC medications, supplements, and health
                     products.
