@@ -51,7 +51,8 @@
   padding: 0.625em 1.25em;
   background-color: var(--primary-color);
   text-decoration: none;
-  border-radius: 3px;
+  border-radius: 50px;
+  margin-top: 15px;
   transition: all 0.25s ease-in-out;
 }
 
@@ -87,13 +88,13 @@ nav .navbar-brand .header h3 {
   margin: 0;
 }
 
-nav .navbar-brand .header h1 {
-  font-size: 0.9em;
+.navbar-brand .header h1 {
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
-nav .navbar-brand .header h3 {
-  font-size: 0.7em;
+.navbar-brand .header h3 {
+  font-size: 1rem;
   font-weight: normal;
   color: var(--dark-color);
 }
@@ -106,7 +107,7 @@ nav .navbar-brand .header h3 {
 }
 
 .navbar-nav .nav-item {
-  font-size: 0.9em;
+  font-size: 1.2rem;
   line-height: 1.2;
   transition: all 0.3s ease;
 }
@@ -332,47 +333,47 @@ nav .navbar-brand .header h3 {
   color: var(--primary-color);
 }
 
-/* +++++++++++++ Contact page ++++++++++++++ */
-.contact {
-  font-size: 1rem;
+.services-page,
+.contact-page {
+  margin-top: 80px;
+  padding-top: 40px;
+}
+
+/* Contact page */
+.contact-page {
+  padding: 40px;
   background-color: var(--white-color);
   padding-bottom: 0;
 }
 
-.contact .contact-heading {
-  font-size: 1.8em;
+.contact-page h2 {
+  font-size: 2rem;
+}
+
+.contact-page .welcome-text {
+  font-size: 1.2rem;
   text-align: center;
 }
 
-.contact .contact-section {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-areas: 
-    'form form form form form form map map map map map map'
-    'info info info info info info map map map map map map';
-  padding: 1em;
+.contact-section {
+  margin-bottom: 40px;
+  padding: 20px 40px;
   background-color: var(--secondary-color);
   border-radius: 5px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* Contact form */
-
-.contact .contact-section .contact-form {
-  grid-area: form;
-  padding: 1em;
+.contact-section .map {
+  padding: 0;
 }
 
-.contact .contact-section .contact-form h3 {
-  font-size: 1.6em;
-  color: var(--violet-color);
-  border-bottom: 1px solid var(--violet-color);
-  padding-bottom: 0.5em;
+.contact-section .map img {
+  width: 100%;
+  border-radius: 5px;
 }
 
-.contact .contact-section .contact-form form {
-  display: grid;
-  /* gap: 1.2em; */
+.contact-section .contact-form {
+  padding: 40px;
 }
 
 .contact .contact-section .contact-form form .row {
@@ -560,315 +561,4 @@ nav .navbar-brand .header h3 {
 .footer .footer-content .site-links a {
   color: var(--light-color);
   text-decoration: none;
-}
-
-.footer .footer-content .site-links a:hover {
-  color: var(--secondary-color);
-}
-
-/* Social links */
-
-.social-links {
-  display: flex;
-  gap: 1.25rem;
-}
-
-.social-links a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--light-color);
-  background-color: var(--dark-color);
-  text-decoration: none;
-  padding: 0.625rem;
-  border-radius: 0.625rem;
-  transition: all 0.2s ease-in-out;
-}
-
-.social-links a:hover {
-  color: var(--light-color);
-  background-color: var(--primary-color);
-}
-
-/* +++++++++++++++++ Media queries ++++++++++++++++ */
-
-@media (max-width: 1024px) {
-
-  /* Navigation */
-  nav {
-    font-size: 0.9rem;
-  }
-  
-  /* Home page */
-
-  .about-section {
-    font-size: 0.78rem;
-  }
-
-  .section .section-details {
-    margin-bottom: 1.25em;
-  }
-  
-  .section-details .section-subtitle {
-    /* font-size: 1.2rem; */
-    margin-top: 0.625em;
-  }
-  
-  .section-details .section-description {
-    font-size: 1.1rem;
-    margin-top: 1.25em;
-    text-align: justify;
-  }
-
-  /* About page */
-
-  .about {
-    font-size: 0.9rem;
-  }
-
-  .services-page {
-    font-size: 0.9rem;
-  }
-
-  /* Services */
-
-  .services {
-    font-size: 0.9rem;
-  }
-
-  /* Contact */
-
-  .contact {
-    font-size: 0.9rem;
-  }
-
-  .contact .contact-section {
-    grid-template-areas: 
-      'form form form form form form form map map map map map'
-      'info info info info info info info map map map map map';
-  }
-
-  /* Footer */
-
-  .footer .footer-title {
-    font-size: 1.2rem;
-  }
-  
-  .footer .copyright {
-    font-size: 0.9rem;
-  }
-
-  .footer .footer-content .site-links ul {
-    gap: 1rem;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-
-  /* Navigation */
-  nav {
-    font-size: 0.9rem;
-  }
-
-  .navbar-nav {
-    padding: 0.5em 4em;
-    border-top: 1px solid rgba(128, 128, 128, 0.5);
-    margin-top: 0.5em
-  }
-
-  /* Home page */
-  .hero {
-    font-size: 0.9rem;
-  }
-
-  .hero p {
-    width: 100%;
-  }
-
-  .about-section {
-    font-size: 0.65rem;
-  }
-
-  .btn-primary {
-    font-size: 0.9rem;
-  }
-
-  /* About page */
-
-  .about {
-    font-size: 0.7rem;
-    margin-top: 7em;
-  }
-  
-  /* Services */
-  
-  .services {
-    font-size: 0.7rem;
-    margin-top: 7em;
-  }
-
-  /* Contact */
-
-  .contact .contact-section {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-    'map'
-    'form'
-    'info';
-    padding: 1em;
-    background-color: var(--secondary-color);
-    border-radius: 5px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-  }
-
-  .contact .contact-section .contact-form form button {
-    width: 100%;
-    margin: 0;
-  }
-
-  .contact .contact-section .contact-map {
-    height: 400px;
-    margin-bottom: 0.5em;
-    padding: 1em;
-  }
-
-
-  /* Footer */
-
-  .footer {
-    padding: 0.625rem 0;
-  }
-
-  .footer .footer-content {
-    flex-direction: column-reverse;
-    gap: 1.25rem;
-  }
-
-  .footer .footer-heading {
-    align-items: center;
-  }
-}
-
-@media (max-width: 600px) {
-  /* About page */
-
-  .about .section .section-details {
-    width: 100%;
-  }
-
-  .about .section .section-illustration {
-    display: none;
-  }
-
-  /* Services page */
-
-  .services .section .section-details {
-    width: 100%;
-    text-align: center;
-  }
-
-  .services .section .section-details .section-description {
-    text-align: center;
-  }
-
-  .services .section .section-illustration {
-    display: none;
-  }
-}
-
-@media (max-width: 480px) {
-
-  /* Home page */
-
-  .hero {
-    font-size: 0.8rem;
-    background-position: left;
-    height: auto;
-    padding: 9em 3em 2em;
-  }
-
-  .hero p {
-    width: 100%;
-    text-align: justify;
-  }
-
-  .hero .btn-primary {
-    font-size: 1.2em;
-    text-align: center;
-    width: 100%;
-  }
-
-  .about-section {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      'illustration'
-      'details';
-    font-size: 0.8rem;
-  }
-
-  .about-section .section-details {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .about-section .section-details .section-title {
-    font-size: 1.8rem;
-  }
-  
-  .about-section .section-details .section-subtitle {
-    font-size: 1.4rem;
-    margin: 0;
-  }
-
-  .about-section .section-details .section-description {
-    font-size: 1rem;
-  }
-
-  .section-details .btn-primary {
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  /* About page */
-
-  .about {
-    font-size: 0.65rem;
-  }
-
-  /* Services */
-
-  .services {
-    font-size: 0.65rem;
-  }
-
-  /* Footer */
-
-  .footer .footer-title {
-    font-size: 1rem;
-  }
-  
-  .footer .copyright {
-    font-size: 0.8rem;
-  }
-
-  .footer .footer-content .site-links ul {
-    gap: 0.8rem;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 425px) {
-  .contact .contact-section .contact-map {
-    padding: 0;
-  }
-}
-
-@media (max-width: 375px) {
-  /* Navigation */
-  
-  nav .navbar-brand .header {
-    display: none;
-  }
 }
