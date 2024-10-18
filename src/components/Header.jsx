@@ -5,7 +5,7 @@ const Header = () => {
     const location = useLocation();
 
     return (
-        <header className='bg-[#146D16] text-white p-4'>
+        <header className='sticky top-0 z-50 bg-[#146D16] text-white p-4 shadow-md'>
             <div className='container mx-auto flex flex-col md:flex-row justify-between items-center'>
                 <div className='flex items-center'>
                     <img
