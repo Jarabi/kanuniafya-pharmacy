@@ -1,9 +1,15 @@
 import Image from './LazyLoadImage';
+import { motion } from 'framer-motion';
 import onlineOrderingImg from '../assets/online-ordering.jpg';
 
 export default function OnlineOrdering() {
     return (
-        <section className='online-ordering section'>
+        <motion.section
+            className='online-ordering section'
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+        >
             <div className='section-illustration'>
                 <Image
                     image={{
@@ -20,6 +26,6 @@ export default function OnlineOrdering() {
                     Convenient on call prescription refills.
                 </p>
             </div>
-        </section>
+        </motion.section>
     );
 }

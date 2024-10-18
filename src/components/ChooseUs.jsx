@@ -1,6 +1,13 @@
+import { motion } from 'framer-motion';
+
 export default function ChooseUs() {
     return (
-        <section className='choose-us section'>
+        <motion.section
+            className='choose-us section'
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1.5 }}
+        >
             <div className='section-details'>
                 <h2 className='section-title'>
                     Why <span className='accent'>Choose</span> KanuniAfya
@@ -36,6 +43,6 @@ export default function ChooseUs() {
                     </p>
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 }

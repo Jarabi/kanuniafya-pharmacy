@@ -1,9 +1,15 @@
 import Image from './LazyLoadImage';
+import { motion } from 'framer-motion';
 import missionImg from '../assets/our-mission.jpg';
 
 export default function OurMission() {
     return (
-        <section className='our-mission section'>
+        <motion.section
+            className='our-mission section'
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1 }}
+        >
             <div className='section-details'>
                 <h2 className='section-title'>
                     Our <span className='accent'>Mission</span>
@@ -25,6 +31,6 @@ export default function OurMission() {
                     }}
                 />
             </div>
-        </section>
+        </motion.section>
     );
 }

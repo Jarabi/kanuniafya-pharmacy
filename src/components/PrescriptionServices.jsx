@@ -1,9 +1,15 @@
 import Image from './LazyLoadImage';
+import { motion } from 'framer-motion';
 import prescriptionServicesImg from '../assets/prescription-services.jpg';
 
 export default function PrescriptionServices() {
     return (
-        <section className='prescription-services section'>
+        <motion.section
+            className='prescription-services section'
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1 }}
+        >
             <div className='section-details'>
                 <h2 className='section-title'>03</h2>
                 <h3 className='section-subtitle'>prescription services</h3>
@@ -20,6 +26,6 @@ export default function PrescriptionServices() {
                     }}
                 />
             </div>
-        </section>
+        </motion.section>
     );
 }

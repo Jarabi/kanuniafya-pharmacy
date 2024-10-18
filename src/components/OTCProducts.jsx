@@ -1,9 +1,15 @@
 import Image from './LazyLoadImage';
+import { motion } from 'framer-motion';
 import otcImg from '../assets/otc-products.jpg';
 
 export default function OTCProducts() {
     return (
-        <section className='otc section'>
+        <motion.section
+            className='otc section'
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+        >
             <div className='section-details'>
                 <h3 className='section-title'>01</h3>
                 <h4 className='section-subtitle'>Over the Counter Products</h4>
@@ -21,6 +27,6 @@ export default function OTCProducts() {
                     }}
                 />
             </div>
-        </section>
+        </motion.section>
     );
 }

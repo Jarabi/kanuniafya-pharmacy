@@ -1,10 +1,16 @@
+import { motion } from 'framer-motion';
 import Button from './Button';
 import Image from './LazyLoadImage';
 import aboutImg from '../assets/about-section.jpg';
 
 const About = () => {
     return (
-        <section className='about-section'>
+        <motion.section
+            className='about-section'
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1 }}
+        >
             <div className='section-illustration'>
                 <Image
                     image={{
@@ -28,7 +34,7 @@ const About = () => {
                 </p>
                 <Button path='/about'>Read More</Button>
             </div>
-        </section>
+        </motion.section>
     );
 };
 

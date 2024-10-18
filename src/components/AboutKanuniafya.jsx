@@ -1,9 +1,15 @@
 import Image from './LazyLoadImage';
+import { motion } from 'framer-motion';
 import aboutImg from '../assets/about-kanuniafya.jpg';
 
 export default function AboutKanuniafya() {
     return (
-        <section className='about-kanuniafya section'>
+        <motion.section
+            className='about-kanuniafya section'
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+        >
             <div className='section-details'>
                 <h2 className='section-title'>
                     About <span className='accent'>Kanuniafya</span>
@@ -23,10 +29,9 @@ export default function AboutKanuniafya() {
                     image={{
                         src: aboutImg,
                         alt: 'three people in a pharmacy setting',
-                        // width: 600,
                     }}
                 />
             </div>
-        </section>
+        </motion.section>
     );
 }

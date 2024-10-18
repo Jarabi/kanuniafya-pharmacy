@@ -1,9 +1,15 @@
 import Image from './LazyLoadImage';
+import { motion } from 'framer-motion';
 import teamImg from '../assets/our-team.jpg';
 
 export default function OurTeam() {
     return (
-        <section className='section'>
+        <motion.section
+            className='section'
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+        >
             <div className='section-illustration'>
                 <Image
                     image={{
@@ -26,6 +32,6 @@ export default function OurTeam() {
                     advancements in pharmacy practice.
                 </p>
             </div>
-        </section>
+        </motion.section>
     );
 }
