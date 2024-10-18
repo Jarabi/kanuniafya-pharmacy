@@ -1,14 +1,8 @@
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
     return (
-        <motion.section
-            className='hero bg-[#146D16] text-white py-20'
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-        >
+        <section className='hero bg-[#146D16] text-white py-20'>
             <div className='container mx-auto text-center'>
                 <h1 className='text-4xl font-bold mb-4'>
                     Welcome to KanuniAfya Pharmacy
@@ -26,7 +20,7 @@ const Hero = () => {
                     View Our Services
                 </Link>
             </div>
-        </motion.section>
+        </section>
     );
 };
 
