@@ -15,7 +15,7 @@ const Hero = () => {
                 </p>
                 <Link
                     to='/services'
-                    className='bg-[#DBC078] text-[#146D16] px-6 py-2 rounded-full font-semibold hover:bg-opacity-90'
+                    className='bg-[#DBC078] text-[#146D16] px-6 py-3 rounded-full font-semibold hover:bg-opacity-90'
                 >
                     View Our Services
                 </Link>
