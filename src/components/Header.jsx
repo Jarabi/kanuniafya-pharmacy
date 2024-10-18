@@ -3,63 +3,48 @@ import logoImage from '../assets/logo.png';
 
 const Header = () => {
     const location = useLocation();
-    const links = [
-        { name: 'Home', path: '/' },
-        { name: 'About', path: '/about' },
-        { name: 'Services', path: '/services' },
-        { name: 'Contact', path: '/contact' },
-    ];
 
     return (
-        <nav className='navbar navbar-expand-lg fixed-top p-3'>
-            <div className='container'>
-                <Link className='navbar-brand' to='/'>
+        <header className='bg-[#146D16] text-white p-4'>
+            <div className='container mx-auto flex flex-col md:flex-row justify-between items-center'>
+                <div className='flex items-center'>
                     <img
+                        className='w-12 h-12 mr-6 shadow-xl rounded-full'
                         src={logoImage}
-                        alt='KanuniAfya logo image'
-                        className='logo'
-                        width={40}
-                        height={40}
+                        alt='Logo image'
                     />
-                    <div className='header'>
-                        <h1>KanuniAfya Pharmacy</h1>
-                        <h3>Health Guaranteed</h3>
+                    <div>
+                        <h1 className='text-2xl font-bold'>
+                            KanuniAfya Pharmacy
+                        </h1>
+                        <p className='text-sm'>Health Guaranteed</p>
                     </div>
-                </Link>
-                <button
-                    className='navbar-toggler'
-                    type='button'
-                    data-bs-toggle='collapse'
-                    data-bs-target='#nav-items'
-                    aria-controls='nav-items'
-                    aria-expanded='false'
-                    aria-label='Toggle navigation'
-                >
-                    <span className='navbar-toggler-icon'></span>
-                </button>
-                <div className='collapse navbar-collapse' id='nav-items'>
-                    <ul className='navbar-nav mb-2 mb-lg-0'>
-                        {links.map((link) => (
-                            <li className='nav-item' key={link.path}>
+                </div>
+                <nav>
+                    <ul className='flex space-x-4'>
+                        {[
+                            { name: 'Home', path: '/' },
+                            { name: 'About', path: '/about' },
+                            { name: 'Services', path: '/services' },
+                            { name: 'Contact', path: '/contact' },
+                        ].map((link) => (
+                            <li key={link.name}>
                                 <Link
-                                    className={`nav-link ${
+                                    to={link.path}
+                                    className={`hover:underline ${
                                         location.pathname === link.path
-                                            ? 'active'
+                                            ? 'text-[#DBC078]'
                                             : ''
                                     }`}
-                                    {...(location.pathname === link.path && {
-                                        'aria-current': 'page',
-                                    })}
-                                    to={link.path}
                                 >
                                     {link.name}
                                 </Link>
                             </li>
                         ))}
                     </ul>
-                </div>
+                </nav>
             </div>
-        </nav>
+        </header>
     );
 };
 
