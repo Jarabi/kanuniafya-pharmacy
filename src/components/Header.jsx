@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import logoImage from '../assets/logo.png';
 
-const Navigation = () => {
+const Header = () => {
     const location = useLocation();
     const links = [
         { name: 'Home', path: '/' },
@@ -63,4 +63,4 @@ const Navigation = () => {
     );
 };
 
-export default Navigation;
+export default Header;
