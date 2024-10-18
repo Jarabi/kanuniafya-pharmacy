@@ -2,41 +2,43 @@ import { Link } from 'react-router-dom';
 import SocialLinks from './SocialLinks';
 
 const Footer = () => {
-    const siteLinks = [
-        { name: 'Home', path: '/' },
-        { name: 'About', path: '/about' },
-        { name: 'Services', path: '/services' },
-        { name: 'Contact', path: '/contact' },
-    ];
-
     return (
-        <section className='footer'>
-            <div className='footer-content'>
-                <p className='footer-heading'>
-                    <span className='footer-title'>
-                        <strong>KanuniAfya Pharmacy</strong>
-                    </span>
-                    <span className='copyright'>
-                        © 2024. All Rights Reserved
-                    </span>
-                </p>
-                <div className='site-links'>
-                    <ul>
-                        {siteLinks.map((link, index) => (
-                            <>
-                                <li key={link.index}>
-                                    <Link to={link.path}>{link.name}</Link>
-                                </li>
-                                {index < siteLinks.length - 1 && (
-                                    <span>&middot;</span>
-                                )}
-                            </>
+        <footer className='bg-[#146D16] text-white p-8'>
+            <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8'>
+                <div>
+                    <h2 className='text-xl font-bold mb-4'>
+                        KanuniAfya Pharmacy
+                    </h2>
+                    <p className='copyright'>
+                        &copy; {new Date().getFullYear()} All Rights Reserved.
+                    </p>
+                </div>
+                <div className='quick-links'>
+                    <h3 className='text-lg font-semibold mb-2'>Quick Links</h3>
+                    <ul className='space-y-2'>
+                        {[
+                            { name: 'Home', path: '/' },
+                            { name: 'About', path: '/about' },
+                            { name: 'Services', path: '/services' },
+                            { name: 'Gallery', path: '/gallery' },
+                            { name: 'Contact', path: '/contact' },
+                        ].map((link) => (
+                            <li key={link.name}>
+                                <Link
+                                    to={link.path}
+                                    className='hover:underline'
+                                >
+                                    {link.name}
+                                </Link>
+                            </li>
                         ))}
                     </ul>
                 </div>
-                <SocialLinks />
+                <div className='social-links'>
+                    <SocialLinks />
+                </div>
             </div>
-        </section>
+        </footer>
     );
 };
 
