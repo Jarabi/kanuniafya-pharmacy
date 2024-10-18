@@ -1,16 +1,10 @@
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Image from './LazyLoadImage';
 import aboutImg from '../assets/about-section.jpg';
 
 const About = () => {
     return (
-        <motion.section
-            className='about-section py-16'
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1 }}
-        >
+        <section className='about-section py-16'>
             <div className='container mx-auto'>
                 <h2 className='text-3xl font-bold text-center'>
                     About <span className='text-[#146D16]'>KanuniAfya</span>
@@ -47,7 +41,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-        </motion.section>
+        </section>
     );
 };
 
