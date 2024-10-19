@@ -30,7 +30,6 @@ export default function AboutKanuniafya() {
             <div className='md:w-1/3 mb-8 md:mb-0'>
                 <Image
                     image={{
-                        className: 'rounded-lg shadow-md',
                         src: aboutImg,
                         alt: 'three people in a pharmacy setting',
                     }}

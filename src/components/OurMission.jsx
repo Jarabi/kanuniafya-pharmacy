@@ -25,7 +25,6 @@ export default function OurMission() {
             <div className='md:w-1/3 mb-8 md:mb-0'>
                 <Image
                     image={{
-                        className: 'rounded-lg shadow-md',
                         src: missionImg,
                         alt: 'Three people around a bullseye target with an arrow in the center',
                     }}

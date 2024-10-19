@@ -13,7 +13,6 @@ export default function OurTeam() {
             <div className='md:w-1/3 mb-8 md:mb-0'>
                 <Image
                     image={{
-                        className: 'rounded-lg shadow-md',
                         src: teamImg,
                         alt: 'Image of four people in a lightbulb',
                     }}
