@@ -42,7 +42,7 @@ const About = () => {
                             to='/about'
                             className='text-[#146D16] font-semibold hover:underline'
                         >
-                            Learn More About Us
+                            Learn More
                         </Link>
                     </div>
                 </div>
