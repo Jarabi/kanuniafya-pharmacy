@@ -17,7 +17,9 @@ const Header = () => {
                         <h1 className='text-2xl font-bold'>
                             KanuniAfya Pharmacy
                         </h1>
-                        <p className='text-sm'>Health Guaranteed</p>
+                        <p className='text-sm hover:text-[#DBC078] transition-text duration-300'>
+                            Health Guaranteed
+                        </p>
                     </div>
                 </div>
                 <nav>

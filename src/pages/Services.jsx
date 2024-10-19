@@ -45,7 +45,7 @@ const Services = () => {
                         <h2 className='text-2xl font-semibold mb-4'>
                             {service.title}
                         </h2>
-                        <p className='text-gray-600 border-t-2 border-t-[#146D16] pt-4'>
+                        <p className='text-gray-600 border-t-[1px] border-t-[#146D16] pt-4'>
                             {service.description}
                         </p>
                     </motion.section>

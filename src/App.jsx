@@ -9,42 +9,14 @@ import Layout from './Layout.jsx';
 
 function App() {
     return (
-        <>
+        <Layout>
             <Routes>
-                <Route
-                    path='/'
-                    element={
-                        <Layout>
-                            <Home />
-                        </Layout>
-                    }
-                />
-                <Route
-                    path='/about'
-                    element={
-                        <Layout>
-                            <About />
-                        </Layout>
-                    }
-                />
-                <Route
-                    path='/services'
-                    element={
-                        <Layout>
-                            <Services />
-                        </Layout>
-                    }
-                />
-                <Route
-                    path='/contact'
-                    element={
-                        <Layout>
-                            <Contact />
-                        </Layout>
-                    }
-                />
+                <Route path='/' element={<Home />} />
+                <Route path='/about' element={<About />} />
+                <Route path='/services' element={<Services />} />
+                <Route path='/contact' element={<Contact />} />
             </Routes>
-        </>
+        </Layout>
     );
 }
 
