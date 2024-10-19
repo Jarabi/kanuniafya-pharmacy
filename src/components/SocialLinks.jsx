@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import 'boxicons';
 
 export default function SocialLinks() {
     return (
@@ -20,13 +21,15 @@ export default function SocialLinks() {
                         path: 'https://www.linkedin.com/in/kanuniafya-pharmacy/',
                     },
                 ].map((link) => (
-                    <Link
-                        target={'_blank'}
-                        to={link.path}
-                        className='hover:text-[#DBC078]'
-                        key={link.name}
-                    >
-                        <i className={`bx bxl-${link.name}`}></i>
+                    <Link target={'_blank'} to={link.path} key={link.name}>
+                        <box-icon
+                            type='logo'
+                            name={link.name}
+                            size='md'
+                            border='circle'
+                            color='white'
+                            animation='flashing-hover'
+                        ></box-icon>
                     </Link>
                 ))}
             </div>
