@@ -1,19 +1,17 @@
-import ContactSection from '../components/ContactSection';
+import ContactForm from '../components/ContactForm';
+import ContactInfo from '../components/ContactInfo';
+import ContactMap from '../components/ContactMap';
 
 const Contact = () => {
     return (
-        <div className='contact section-layout'>
-            <h2 className='contact-heading'>
-                <span className='accent'>Contact</span> Us
-            </h2>
-            <div className='row justify-content-center'>
-                <div className='col-md-12'>
-                    <div className='wrapper'>
-                        <div className='row no-gutters mb-5'>
-                            <ContactSection />
-                        </div>
-                    </div>
-                </div>
+        <div className='container mx-auto py-16'>
+            <h1 className='text-4xl font-bold text-center mb-16'>
+                <span className='text-[#146D16]'>Contact</span> Us
+            </h1>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+                <ContactForm />
+                <ContactMap />
+                <ContactInfo />
             </div>
         </div>
     );
