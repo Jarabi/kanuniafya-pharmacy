@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'boxicons';
 
 export default function SocialLinks() {
+    const [hoveredIcon, setHoveredIcon] = useState(null);
+
     return (
         <>
             <h3 className='text-lg font-semibold mb-2'>Connect With Us</h3>
@@ -21,14 +24,21 @@ export default function SocialLinks() {
                         path: 'https://www.linkedin.com/in/kanuniafya-pharmacy/',
                     },
                 ].map((link) => (
-                    <Link target={'_blank'} to={link.path} key={link.name}>
+                    <Link
+                        target={'_blank'}
+                        to={link.path}
+                        key={link.name}
+                        onMouseEnter={() => setHoveredIcon(link.name)}
+                        onMouseLeave={() => setHoveredIcon(null)}
+                    >
                         <box-icon
                             type='logo'
                             name={link.name}
                             size='md'
                             border='circle'
-                            color='white'
-                            animation='flashing-hover'
+                            color={
+                                hoveredIcon === link.name ? '#DBC078' : 'white'
+                            }
                         ></box-icon>
                     </Link>
                 ))}

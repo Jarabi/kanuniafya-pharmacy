@@ -26,7 +26,7 @@ const Footer = () => {
                             <li key={link.name}>
                                 <Link
                                     to={link.path}
-                                    className='hover:underline'
+                                    className='hover:underline hover:text-[#DBC078]'
                                 >
                                     {link.name}
                                 </Link>

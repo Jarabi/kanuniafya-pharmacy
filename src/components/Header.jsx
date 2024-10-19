@@ -9,7 +9,7 @@ const Header = () => {
             <div className='container mx-auto flex flex-col md:flex-row justify-between items-center'>
                 <div className='flex items-center'>
                     <img
-                        className='w-12 h-12 mr-6 shadow-xl rounded-full'
+                        className='w-12 h-12 mr-6'
                         src={logoImage}
                         alt='Logo image'
                     />
@@ -17,7 +17,7 @@ const Header = () => {
                         <h1 className='text-2xl font-bold'>
                             KanuniAfya Pharmacy
                         </h1>
-                        <p className='text-sm hover:text-[#DBC078] transition-text duration-300'>
+                        <p className='text-md hover:text-[#DBC078] transition-text duration-300'>
                             Health Guaranteed
                         </p>
                     </div>
