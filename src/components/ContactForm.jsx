@@ -45,66 +45,76 @@ function ContactForm() {
     };
 
     return (
-        <div className='contact-form'>
-            <h3>Talk to us</h3>
-            <form ref={form} onSubmit={sendEmail}>
-                <div className='row'>
-                    <div className='input-grp fullname col-md-6'>
-                        <label htmlFor='from_name'>FULL NAME</label>
+        <div className='shadow-sm rounded p-4'>
+            <h2 className='text-2xl font-semibold mb-8'>Get in Touch</h2>
+            <form ref={form} onSubmit={sendEmail} className='space-y-4'>
+                <div className='flex gap-4'>
+                    <div className='flex flex-col w-1/2'>
+                        <label htmlFor='from_name' className='block mb-2'>
+                            Name
+                        </label>
                         <input
                             type='text'
                             id='from_name'
                             name='from_name'
-                            placeholder='Name'
+                            className='w-full p-2 border focus:outline outline-1 outline-[#146D16] rounded'
                             required
                         />
-                        <small className='errMsg'>Please enter full name</small>
+                        <small className='errMsg hidden'>
+                            Please enter full name
+                        </small>
                     </div>
-                    <div className='input-grp email col-md-6'>
-                        <label htmlFor='from_email'>EMAIL</label>
+                    <div className='flex flex-col w-1/2'>
+                        <label htmlFor='from_email' className='block mb-2'>
+                            Email Address
+                        </label>
                         <input
                             type='email'
                             id='from_email'
                             name='from_email'
-                            placeholder='Email'
+                            className='w-full p-2 border focus:outline outline-1 outline-[#146D16] rounded'
                             required
                         />
-                        <small className='errMsg'>
-                            Please enter your email
+                        <small className='errMsg hidden'>
+                            Please enter your email address
                         </small>
                     </div>
                 </div>
-                <div className='row'>
-                    <div className='input-grp subject col-md-12'>
-                        <label htmlFor='subject'>SUBJECT</label>
-                        <input
-                            className='w-100'
-                            type='text'
-                            id='subject'
-                            name='subject'
-                            placeholder='Subject'
-                            required
-                        />
-                        <small className='errMsg'>
-                            Please enter email subject
-                        </small>
-                    </div>
+                <div className='flex flex-col'>
+                    <label htmlFor='subject' className='block mb-2'>
+                        Subject
+                    </label>
+                    <input
+                        type='text'
+                        id='subject'
+                        name='subject'
+                        className='w-full p-2 border focus:outline outline-1 outline-[#146D16] rounded'
+                        required
+                    />
+                    <small className='errMsg hidden'>
+                        Please enter email subject
+                    </small>
                 </div>
-                <div className='row'>
-                    <div className='input-grp message col-md-12'>
-                        <label htmlFor='message'>MESSAGE</label>
-                        <textarea
-                            className='w-100'
-                            id='message'
-                            name='message'
-                            placeholder='Message'
-                            rows={5}
-                            required
-                        ></textarea>
-                        <small className='errMsg'>Please enter message</small>
-                    </div>
+                <div className='flex flex-col'>
+                    <label htmlFor='message' className='block mb-2'>
+                        Message
+                    </label>
+                    <textarea
+                        id='message'
+                        name='message'
+                        rows={4}
+                        className='w-full p-2 border focus:outline outline-1 outline-[#146D16] rounded'
+                        required
+                    ></textarea>
+                    <small className='errMsg hidden'>
+                        Please enter message
+                    </small>
                 </div>
-                <button type='submit' disabled={isSubmitting}>
+                <button
+                    type='submit'
+                    className='bg-[#146D16] text-white px-6 py-2 rounded hover:bg-opacity-90'
+                    disabled={isSubmitting}
+                >
                     {stateMessage}
                 </button>
             </form>
