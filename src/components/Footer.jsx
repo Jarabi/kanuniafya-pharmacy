@@ -5,15 +5,15 @@ const Footer = () => {
     return (
         <footer className='bg-[#146D16] text-white p-8'>
             <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8'>
-                <div>
-                    <h2 className='text-xl font-bold mb-4'>
+                <div className='text-center'>
+                    <h2 className='text-xl font-bold mb-2'>
                         KanuniAfya Pharmacy
                     </h2>
                     <p className='copyright'>
                         &copy; {new Date().getFullYear()} All Rights Reserved.
                     </p>
                 </div>
-                <div className='quick-links'>
+                <div className='text-center'>
                     <h3 className='text-lg font-semibold mb-2'>Quick Links</h3>
                     <ul className='space-y-2'>
                         {[
@@ -34,7 +34,7 @@ const Footer = () => {
                         ))}
                     </ul>
                 </div>
-                <div className='social-links'>
+                <div className='text-center'>
                     <SocialLinks />
                 </div>
             </div>

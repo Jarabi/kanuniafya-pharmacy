@@ -4,7 +4,7 @@ export default function SocialLinks() {
     return (
         <>
             <h3 className='text-lg font-semibold mb-2'>Connect With Us</h3>
-            <div className='flex space-x-4'>
+            <div className='flex space-x-4 justify-center'>
                 {[
                     {
                         name: 'facebook',
