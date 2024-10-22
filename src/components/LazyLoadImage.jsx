@@ -6,6 +6,8 @@ const Image = ({ image }) => (
     <LazyLoadImage
         alt={image.alt}
         src={image.src}
+        width={image.width}
+        height={image.height}
         className='rounded-md shadow-sm'
         effect='blur'
     />
@@ -17,5 +19,8 @@ Image.propTypes = {
     image: PropTypes.shape({
         src: PropTypes.string.isRequired,
         alt: PropTypes.string.isRequired,
+        width: PropTypes.string,
+        height: PropTypes.string,
+        className: PropTypes.string,
     }).isRequired,
 };
