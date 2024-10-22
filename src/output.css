@@ -909,6 +909,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -939,6 +944,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .shadow-lg {
@@ -988,11 +998,6 @@ video {
 
 .duration-300 {
   transition-duration: 300ms;
-}
-
-.errMsg {
-  color: red;
-  font-size: 0.8rem;
 }
 
 .hover\:bg-opacity-90:hover {

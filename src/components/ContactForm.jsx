@@ -9,9 +9,44 @@ function ContactForm() {
     const form = useRef();
     const [stateMessage, setStateMessage] = useState('Send Message');
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [errors, setErrors] = useState({});
+
+    const validateForm = () => {
+        let formErrors = {};
+
+        // Check if name is empty
+        if (!form.current.from_name.value.trim()) {
+            formErrors.from_name = 'Please enter your name';
+        }
+
+        // Check if email is empty or invalid
+        const email = form.current.from_email.value;
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        if (!email.trim() || !emailPattern.test(email)) {
+            formErrors.from_email = 'Please enter a valid email address';
+        }
+
+        // Check if subject is empty
+        if (!form.current.subject.value.trim()) {
+            formErrors.subject = 'Please enter the subject';
+        }
+
+        // Check if message is empty
+        if (!form.current.message.value.trim()) {
+            formErrors.message = 'Please enter your message';
+        }
+
+        setErrors(formErrors);
+
+        // Return true if no errors, otherwise, false
+        return Object.keys(formErrors).length === 0;
+    };
 
     const sendEmail = (e) => {
         e.preventDefault();
+
+        if (!validateForm()) return;
+
         setIsSubmitting(true);
         setStateMessage('Sending...');
 
@@ -60,9 +95,11 @@ function ContactForm() {
                             className='w-full p-2 border focus:outline outline-1 outline-[#146D16] rounded'
                             required
                         />
-                        <small className='errMsg hidden'>
-                            Please enter full name
-                        </small>
+                        {errors.from_name && (
+                            <small className='text-xs text-red-500'>
+                                {errors.from_name}
+                            </small>
+                        )}
                     </div>
                     <div className='flex flex-col w-1/2'>
                         <label htmlFor='from_email' className='block mb-2'>
@@ -75,9 +112,11 @@ function ContactForm() {
                             className='w-full p-2 border focus:outline outline-1 outline-[#146D16] rounded'
                             required
                         />
-                        <small className='errMsg hidden'>
-                            Please enter your email address
-                        </small>
+                        {errors.from_email && (
+                            <small className='text-xs text-red-500'>
+                                {errors.from_email}
+                            </small>
+                        )}
                     </div>
                 </div>
                 <div className='flex flex-col'>
@@ -91,9 +130,11 @@ function ContactForm() {
                         className='w-full p-2 border focus:outline outline-1 outline-[#146D16] rounded'
                         required
                     />
-                    <small className='errMsg hidden'>
-                        Please enter email subject
-                    </small>
+                    {errors.subject && (
+                        <small className='text-xs text-red-500'>
+                            {errors.subject}
+                        </small>
+                    )}
                 </div>
                 <div className='flex flex-col'>
                     <label htmlFor='message' className='block mb-2'>
@@ -106,9 +147,11 @@ function ContactForm() {
                         className='w-full p-2 border focus:outline outline-1 outline-[#146D16] rounded'
                         required
                     ></textarea>
-                    <small className='errMsg hidden'>
-                        Please enter message
-                    </small>
+                    {errors.message && (
+                        <small className='text-xs text-red-500'>
+                            {errors.message}
+                        </small>
+                    )}
                 </div>
                 <button
                     type='submit'
